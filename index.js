@@ -53,7 +53,10 @@ async function getGames() {
           }).then(({ objectID }) => {
             console.log(game.title + ' added to the database!');
         }); 
-    });
+    })
+    .catch(function (error) {
+        console.log(error)
+    })
 }
 
 module.exports = getGames();
