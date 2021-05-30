@@ -2,7 +2,7 @@ const axios = require("axios")
 const algoliasearch = require('algoliasearch')
 require('dotenv').config()
 
-const client = algoliasearch('0X90LHIM7C', process.env.ALGOLIA_KEY)
+const client = algoliasearch('0X90LHIM7C', process.argv.slice(2))
 const index = client.initIndex('games');
 
 async function getGames() {
